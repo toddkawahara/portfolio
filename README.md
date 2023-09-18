@@ -6,6 +6,7 @@ M.S. Business Analytics | University of Massachusetts-Amherst '23
 
 
 B.S. Mathematics | Trinity College '22
+
 B.S. Economics (Honors) | Trinity College '22
 ## Projects
 ### [Expected Bat Speed from Biomechanical Data](https://toddkawahara.wordpress.com/2023/09/10/expected-bat-speed-from-biomechanical-data/)
