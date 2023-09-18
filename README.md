@@ -13,8 +13,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Point 2
 - Point 3
 
-![Feature Importance](/images/expected bat speed feat imp.png) 
-[Pelvis](/images/expected bat speed pelvis.png)
+![](/images/expected bat speed pelvis.png)
 
 
 ### <ins>[Predicting Hitter Exit Velocity: The Importance of Bat Speed](https://toddkawahara.wordpress.com/2023/01/10/predicting-hitter-exit-velocity-the-importance-of-bat-speed/)<ins>
