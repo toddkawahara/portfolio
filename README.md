@@ -3,6 +3,7 @@
 ### Education
 Trinity College, BS Mathematics, BS Economics
 
+
 University of Massachusetts-Amherst, MS Business Analytics
 
 ### Projects
