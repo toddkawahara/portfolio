@@ -1,13 +1,13 @@
 # Portfolio
 
 ### Education
-University of Massachusetts-Amherst '23, Business Analytics MS
+MS, Business Analytics | University of Massachusetts-Amherst '23
 
 
-Trinity College '22, Mathematics BS
+BS, Mathematics | Trinity College '22
 
 
-Trinity College '22, Economics BS
+BS, Economics (Honors) | Trinity College '22
 ### Projects
 Expected Bat Speed from Biomechanical Data
 
