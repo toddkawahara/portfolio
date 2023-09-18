@@ -1,11 +1,10 @@
 # Portfolio
 
 ### Education
-Trinity College, BS Mathematics, BS Economics
-
-
 University of Massachusetts-Amherst, MS Business Analytics
 
+
+Trinity College, BS Mathematics, BS Economics
 ### Projects
 Expected Bat Speed from Biomechanical Data
 
