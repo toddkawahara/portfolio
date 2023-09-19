@@ -27,9 +27,11 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 
 ### <ins>[Predicting Hitter Exit Velocity: The Importance of Bat Speed](https://toddkawahara.wordpress.com/2023/01/10/predicting-hitter-exit-velocity-the-importance-of-bat-speed/)<ins>
 [Notebook](https://github.com/toddkawahara/predicted-exit-velocity/blob/main/Driveline_Hitting.ipynb)
-- Point 1
-- Point 2
-- Point 3
+- Utilized elite-level baseball hitters' biomechanical data from [The OpenBiomechanics Project](https://www.openbiomechanics.org/) by Driveline Baseball Research and Development to predict the exit velocity of a hitter's swing.
+- Conducted feature engineering to create features meant to capture skills not directly captured by the dataset (bat-to-ball skills)
+- Examined how a Linear Regression, Random Forest Regression, and XGBoost Regression did with different feature sets before selecting the Random Forest Regression and one feature set to tune using grid searches
+- Generated predictions from the tuned model to get an average RMSE of 4.51 MPH, also evaulated by plotting the distribution of the predicted exit velocities against the actual exit velocities
+- Plotted the Random Forest Regression's feature importance to see that bat speed was the biggest biomechanical factor in predicting a hitter's exit velocity
 
 
 ![Evaluation](images/expected exit velo evaluation.png)
