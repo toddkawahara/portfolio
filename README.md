@@ -20,7 +20,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Tested how a changing threshold of correlations to remove in the feature set affected RMSE and the slope of the line of best fit between the predicted and actual bat speeds for a Linear Regression, Ridge Regression, and XGBoost Regression
 - Graphed learning curves to see how the Ridge and XGBoost Regressions were learning before tuning them using the Optuna package, minimizing RMSE
 - Generated predicted bat speeds with an RMSE of 2.77 MPH from the XGBoost Regression and analyzed the model's feature importance to reveal that pelvis angular velocity was by far the most important factor in predicting bat speed
-- Plotted the relationship between pelvis angular velocity to observe a statistically significant linear relationship (p=0.00) with a positive correlation (Pearson: 0.261) between the two variables
+- Plotted the relationship between pelvis angular velocity and bat speed to observe a statistically significant linear relationship (p=0.00) with a positive correlation (Pearson: 0.261) between the two variables
 
 
 ![Pelvis](images/expected bat speed pelvis.png)
