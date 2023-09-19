@@ -49,4 +49,4 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Used SHapley Additive exPlanations (SHAP) to generate feature importance and discover that individuals who previously had pneumonia or were in certain age groups were more likely to be hospitalized from Covid-19
 
 
-![Calibration](images/covid_calibration.png)
+![Calibration](images/covid_calibration_1.png)
