@@ -22,7 +22,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Generated predicted bat speeds with an RMSE of 2.77 MPH from the XGBoost Regression and analyzed the model's feature importance to reveal that pelvis angular velocity was by far the most important factor in predicting bat speed
 - Plotted the relationship between pelvis angular velocity and bat speed to observe a statistically significant linear relationship (p=0.00) with a positive correlation (Pearson: 0.261) between the two variables
 
-![Pelvis1](https://github.com/toddkawahara/portfolio/blob/main/images/expected%20bat%20speed%20pelvis.png)
+![Pelvis1](images/expected bat speed pelvis.png)
 
 
 ### <ins>[Predicting Hitter Exit Velocity: The Importance of Bat Speed](https://toddkawahara.wordpress.com/2023/01/10/predicting-hitter-exit-velocity-the-importance-of-bat-speed/)<ins>
@@ -34,7 +34,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Analyzed the Random Forest Regression's feature importance to see that bat speed was the biggest factor in the feature set in predicting a hitter's exit velocity
 
 
-![Evaluation](https://github.com/toddkawahara/portfolio/blob/main/images/expected%20exit%20velo%20evaluation.png)
+![Evaluation](images/expected exit velo evaluation.png)
 
 
 ### <ins>[Using Machine Learning to Determine What Pre-Existing Factors Put Individuals at High Risk to Covid-19](https://toddkawahara.wordpress.com/2023/01/26/using-machine-learning-to-see-what-pre-existing-factors-put-individuals-at-high-risk-to-covid-19/)<ins>
@@ -46,4 +46,4 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Used SHapley Additive exPlanations (SHAP) to generate feature importance and discover that individuals who previously had pneumonia or were in certain age groups were more likely to be hospitalized from Covid-19
 
 
-![Calibration](https://github.com/toddkawahara/portfolio/blob/main/images/covid_calibration_1.png)
+![Calibration](images/covid_calibration_1.png)
