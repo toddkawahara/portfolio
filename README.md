@@ -24,6 +24,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 ![Feature Importance](/images/expected bat speed feat imp.png)
 
 
+
 ### <ins>[Predicting Hitter Exit Velocity: The Importance of Bat Speed](https://toddkawahara.wordpress.com/2023/01/10/predicting-hitter-exit-velocity-the-importance-of-bat-speed/)<ins>
 [Notebook](https://github.com/toddkawahara/predicted-exit-velocity/blob/main/Driveline_Hitting.ipynb)
 - Point 1
@@ -32,6 +33,8 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 
 
 ![Evaluation](images/expected exit velo evaluation.png)
+
+
 
 ### <ins>[Using Machine Learning to Determine What Pre-Existing Factors Put Individuals at High Risk to Covid-19](https://toddkawahara.wordpress.com/2023/01/26/using-machine-learning-to-see-what-pre-existing-factors-put-individuals-at-high-risk-to-covid-19/)<ins>
 [Notebook](https://github.com/toddkawahara/covid-hospitalizations/blob/main/Covid.ipynb)
