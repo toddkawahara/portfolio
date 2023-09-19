@@ -16,7 +16,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 ## Projects
 ### <ins>[Expected Bat Speed from Biomechanical Data](https://toddkawahara.wordpress.com/2023/09/10/expected-bat-speed-from-biomechanical-data/)<ins>
 [Notebook](https://github.com/toddkawahara/expected-bat-speed/blob/main/Predicting_Bat_Speed.ipynb)
-- Created an expected bat speed model to see how it could be trained using elite-level baseball hitters' biomechanical data from [The OpenBiomechanics Project](https://www.openbiomechanics.org/) by Driveline Baseball Research and Development
+- Created an expected bat speed model to see how bat speed could be trained, using elite-level baseball hitters' biomechanical data from [The OpenBiomechanics Project](https://www.openbiomechanics.org/) by Driveline Baseball Research and Development
 - Tested how a changing threshold of correlations to remove in the feature set affected RMSE and the slope of the line of best fit between the predicted and actual bat speeds for a Linear Regression, Ridge Regression, and XGBoost Regression
 - Graphed learning curves to see how the Ridge and XGBoost Regressions were learning before tuning them using the Optuna package, minimizing RMSE
 - Generated predicted bat speeds with an RMSE of 2.77 MPH from the XGBoost Regression and analyzed the model's feature importance to reveal that pelvis angular velocity was by far the most important factor in predicting bat speed
