@@ -23,7 +23,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Plotted the relationship between pelvis angular velocity to observe a statistically significant linear relationship (p=0.00) with a positive correlation (Pearson: 0.261) between the two variables
 
 
-![Feature Importance](/images/expected bat speed feat imp.png)
+![Pelvis](images/expected bat speed pelvis.png)
 
 
 
