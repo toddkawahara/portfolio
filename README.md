@@ -1,5 +1,3 @@
-# Portfolio
-
 ## Contact Information
 Email: toddkawahara@hotmail.com
 
