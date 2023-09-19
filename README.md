@@ -1,5 +1,5 @@
 ## Contact Information
-Email: toddkawahara@hotmail.com
+toddkawahara@hotmail.com
 
 
 [LinkedIn](https://www.linkedin.com/in/todd-kawahara/)
