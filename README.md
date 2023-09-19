@@ -22,7 +22,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Generated predicted bat speeds with an RMSE of 2.77 MPH from the XGBoost Regression and analyzed the model's feature importance to reveal that pelvis angular velocity was by far the most important factor in predicting bat speed
 - Plotted the relationship between pelvis angular velocity and bat speed to observe a statistically significant linear relationship (p=0.00) with a positive correlation (Pearson: 0.261) between the two variables
 
-![Pelvis1](https://toddkawahara.github.io/portfolio/images/expected bat speed pelvis.png)
+![Pelvis1](https://github.com/toddkawahara/portfolio/blob/main/images/expected%20bat%20speed%20pelvis.png)
 ![Pelvis](images/expected bat speed pelvis.png)
 
 
