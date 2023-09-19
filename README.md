@@ -40,4 +40,4 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Point 3
 
 
-Put calibration plot
+![Calibration](images/covid_calibration.png)
