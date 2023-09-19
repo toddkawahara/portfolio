@@ -31,7 +31,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Point 3
 
 
-Put predictions against actual
+![Evaluation](images/expected exit velo evaluation.png)
 
 ### <ins>[Using Machine Learning to Determine What Pre-Existing Factors Put Individuals at High Risk to Covid-19](https://toddkawahara.wordpress.com/2023/01/26/using-machine-learning-to-see-what-pre-existing-factors-put-individuals-at-high-risk-to-covid-19/)<ins>
 [Notebook](https://github.com/toddkawahara/covid-hospitalizations/blob/main/Covid.ipynb)
