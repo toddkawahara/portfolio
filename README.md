@@ -7,7 +7,7 @@ M.S. Business Analytics | University of Massachusetts-Amherst '23
 
 
 B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
-## Projects
+## Personal Projects
 ### <ins>[Expected Bat Speed from Biomechanical Data](https://toddkawahara.wordpress.com/2023/09/10/expected-bat-speed-from-biomechanical-data/)<ins>
 [Notebook](https://github.com/toddkawahara/expected-bat-speed/blob/main/Predicting_Bat_Speed.ipynb)
 - Created an expected bat speed model to see how bat speed could be trained, worked with elite-level baseball hitters' biomechanical data from [The OpenBiomechanics Project](https://www.openbiomechanics.org/) by Driveline Baseball Research and Development
