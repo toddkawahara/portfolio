@@ -1,11 +1,5 @@
 ## Contact Information
-toddkawahara@hotmail.com
-
-
-[LinkedIn](https://www.linkedin.com/in/todd-kawahara/)
-
-
-[Twitter](https://twitter.com/toddkawahara)
+toddkawahara@hotmail.com | [LinkedIn](https://www.linkedin.com/in/todd-kawahara/) | [Twitter](https://twitter.com/toddkawahara)
 
 ## Education
 M.S. Business Analytics | University of Massachusetts-Amherst '23
