@@ -1,6 +1,12 @@
 ## Contact Information
 toddkawahara@hotmail.com | [LinkedIn](https://www.linkedin.com/in/todd-kawahara/) | [Twitter](https://twitter.com/toddkawahara)
 
+
+## Work Experience
+Baseball Analytics Trainee (Data Science) | Cincinnati Reds | Feb 2024 - Nov 2024
+
+
+Statistical Data Analyst | Olin Business School at Washington University in St. Louis | June 2023 - January 2024
 ## Education
 M.S. Business Analytics | University of Massachusetts-Amherst '23
 
