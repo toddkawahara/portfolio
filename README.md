@@ -22,6 +22,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Utilized Hamiltonian Monte Carlo to perform inference, inspected trace plots to ensure convergence of chains
 - Evaluated model performance using normalized log posterior predictive density
 
+![Trace](images/trace.png)
 
 ### <ins>[Expected Bat Speed from Biomechanical Data](https://toddkawahara.wordpress.com/2023/09/10/expected-bat-speed-from-biomechanical-data/)<ins>
 [Notebook](https://github.com/toddkawahara/expected-bat-speed/blob/main/Predicting_Bat_Speed.ipynb)
