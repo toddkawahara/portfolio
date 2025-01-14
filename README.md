@@ -14,6 +14,15 @@ M.S. Business Analytics | University of Massachusetts-Amherst '23
 
 B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 ## Personal Projects
+### <ins>[Attempting to Model Inning Outcomes Using Stuff: A Bayesian Approach](https://medium.com/@toddkawahara/attempting-to-model-inning-outcomes-using-stuff-a-bayesian-approach-8f6784241dfd)<ins>
+[Notebook](https://github.com/toddkawahara/outing_predictions/blob/main/outing_predictions%20(1).ipynb)
+- Built personal Stuff model to generate expected run values for each pitch in the 2024 season
+- Tested between different exponential distributions for the likelihood function and hierarchical model structures
+- Examined prior predictive simulation distribution to verify that priors were sensible
+- Utilized Hamiltonian Monte Carlo to perform inference, inspected trace plots to ensure convergence of chains
+- Evaluated model performance using normalized log posterior predictive density
+
+
 ### <ins>[Expected Bat Speed from Biomechanical Data](https://toddkawahara.wordpress.com/2023/09/10/expected-bat-speed-from-biomechanical-data/)<ins>
 [Notebook](https://github.com/toddkawahara/expected-bat-speed/blob/main/Predicting_Bat_Speed.ipynb)
 - Created an expected bat speed model to see how bat speed could be trained, worked with elite-level baseball hitters' biomechanical data from [The OpenBiomechanics Project](https://www.openbiomechanics.org/) by Driveline Baseball Research and Development
@@ -25,7 +34,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 ![Pelvis1](images/expected bat speed pelvis.png)
 
 
-### <ins>[Predicting Hitter Exit Velocity: The Importance of Bat Speed](https://toddkawahara.wordpress.com/2023/01/10/predicting-hitter-exit-velocity-the-importance-of-bat-speed/)<ins>
+### <ins>[Predicting Hitter Exit Velocity: The Importance of Bat Speed](https://medium.com/@toddkawahara/predicting-hitter-exit-velocity-the-importance-of-bat-speed-6d59a25d368c)<ins>
 [Notebook](https://github.com/toddkawahara/predicted-exit-velocity/blob/main/Driveline_Hitting.ipynb)
 - Utilized elite-level baseball hitters' biomechanical data from [The OpenBiomechanics Project](https://www.openbiomechanics.org/) by Driveline Baseball Research and Development to predict the exit velocity of a hitter's swing.
 - Conducted feature engineering to create feature meant to capture skills not directly captured by the dataset (bat-to-ball skills)
