@@ -24,7 +24,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 
 ![Trace](images/trace.png)
 
-### <ins>[Expected Bat Speed from Biomechanical Data](https://toddkawahara.wordpress.com/2023/09/10/expected-bat-speed-from-biomechanical-data/)<ins>
+### <ins>[Expected Bat Speed from Biomechanical Data](https://medium.com/@toddkawahara/expected-bat-speed-from-biomechanical-data-ecf5620e110e)<ins>
 [Notebook](https://github.com/toddkawahara/expected-bat-speed/blob/main/Predicting_Bat_Speed.ipynb)
 - Created an expected bat speed model to see how bat speed could be trained, worked with elite-level baseball hitters' biomechanical data from [The OpenBiomechanics Project](https://www.openbiomechanics.org/) by Driveline Baseball Research and Development
 - Tested how a changing threshold of correlations to remove in the feature set affected RMSE and the slope of the line of best fit between the predicted and actual bat speeds for a Linear Regression, Ridge Regression, and XGBoost Regression
@@ -47,7 +47,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 ![Evaluation](images/expected exit velo evaluation.png)
 
 
-### <ins>[Using Machine Learning to Determine What Pre-Existing Factors Put Individuals at High Risk to Covid-19](https://toddkawahara.wordpress.com/2023/01/26/using-machine-learning-to-see-what-pre-existing-factors-put-individuals-at-high-risk-to-covid-19/)<ins>
+### <ins>[Using Machine Learning to Determine What Pre-Existing Factors Put Individuals at High Risk to Covid-19](https://medium.com/@toddkawahara/using-machine-learning-to-determine-what-pre-existing-factors-put-individuals-at-high-risk-to-faeda950795c)<ins>
 [Notebook](https://github.com/toddkawahara/covid-hospitalizations/blob/main/Covid.ipynb)
 - Obtained a dataset of over 1 million hospital patients with various pre-existing conditions from the Mexican government. Cleaned the dataset by selecting only patients that tested positive for Covid-19, removing null/missing entries, and fixing pregnancy entries for males
 - Performed explatory data analysis and discovered that Covid positive patients who previously had pneumonia were hospitalized more often than any other condition
