@@ -17,7 +17,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 ### <ins>[Attempting to Model Inning Outcomes Using Stuff: A Bayesian Approach](https://medium.com/@toddkawahara/attempting-to-model-inning-outcomes-using-stuff-a-bayesian-approach-8f6784241dfd)<ins>
 [Notebook](https://github.com/toddkawahara/outing_predictions/blob/main/outing_predictions%20(1).ipynb)
 - Built personal Stuff model to generate expected run values for each pitch in the 2024 season
-- Tested between different exponential distributions for the likelihood function and hierarchical model structures
+- Tested between different distributions and hierarchical model structures for the likelihood function
 - Examined prior predictive simulation distribution to verify that priors were sensible
 - Utilized Hamiltonian Monte Carlo to perform inference, inspected trace plots to ensure convergence of chains
 - Evaluated model performance using normalized log posterior predictive density
