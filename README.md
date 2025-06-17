@@ -14,13 +14,15 @@ M.S. Business Analytics | University of Massachusetts-Amherst '23
 
 B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 ## Personal Projects
-### <ins[A Stuff+ Metric Using An Ensemble of Gradient Boosted, Neural Network, and Bayesian Models](https://medium.com/@toddkawahara/a-stuff-metric-using-an-ensemble-of-gradient-boosted-neural-network-and-bayesian-models-6559a0cffcdd)
+### <ins>[A Stuff+ Metric Using An Ensemble of Gradient Boosted, Neural Network, and Bayesian Models](https://medium.com/@toddkawahara/a-stuff-metric-using-an-ensemble-of-gradient-boosted-neural-network-and-bayesian-models-6559a0cffcdd)
 [Notebook](https://github.com/toddkawahara/stuff-plus/blob/main/Stuff_plus.ipynb)
 - Created and tested XGBoost, LightGBM, CatBoost, and Dense Neural Networks for a baseline Stuff+ Model
 - Designed multiple ensemble nested model structure for Stuff+ predictions, testing multiple models at each stage
 - Examined the optimal number of hidden layers for Dense Neural Network models
 - Utilized PyMC to generate posterior predictive distributions for Launch Angle and Exit Velocity
 - Evaluated Bayesian Models with ELPD using Leave-One-Out cross validation
+
+![model_struc](images/model_struc.webp)
 
 ### <ins>[Attempting to Model Inning Outcomes Using Stuff: A Bayesian Approach](https://medium.com/@toddkawahara/attempting-to-model-inning-outcomes-using-stuff-a-bayesian-approach-8f6784241dfd)<ins>
 [Notebook](https://github.com/toddkawahara/outing_predictions/blob/main/outing_predictions%20(1).ipynb)
