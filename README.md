@@ -1,5 +1,5 @@
 ## Contact Information
-toddkawahara@hotmail.com | [GitHub](https://github.com/toddkawahara) | [LinkedIn](https://www.linkedin.com/in/todd-kawahara/) | [Twitter](https://twitter.com/toddkawahara)
+toddkawahara@hotmail.com | [LinkedIn](https://www.linkedin.com/in/todd-kawahara/) | [GitHub](https://github.com/toddkawahara) | [Blog](https://medium.com/@toddkawahara)
 
 
 ## Work Experience
