@@ -9,6 +9,7 @@ Data Operations Analyst, QA | Berkeley Research Group | Sep 2025 - Present
 Baseball Analytics Trainee (Data Science) | Cincinnati Reds | Feb 2024 - Nov 2024
 
 
+
 Statistical Data Analyst | Olin Business School at Washington University in St. Louis | Jun 2023 - Jan 2024
 ## Education
 M.S. Business Analytics | University of Massachusetts-Amherst '23
