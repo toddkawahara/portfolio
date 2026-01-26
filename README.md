@@ -25,7 +25,7 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 - Utilized non-centered parameterization for more efficient random effect sampling
 - Examine global and invididual playoff game posteriors to determine there is no effect of playoff games on performance 
 
-![model_struc](images/model_struc.webp)
+![best_worst_playoff_pitchers](images/best_worst_playoff_pitchers.png)
 ### <ins>[A Stuff+ Metric Using An Ensemble of Gradient Boosted, Neural Network, and Bayesian Models](https://medium.com/@toddkawahara/a-stuff-metric-using-an-ensemble-of-gradient-boosted-neural-network-and-bayesian-models-6559a0cffcdd)
 [Notebook](https://github.com/toddkawahara/stuff-plus/blob/main/Stuff_plus.ipynb)
 - Created and tested XGBoost, LightGBM, CatBoost, and Dense Neural Networks for a baseline Stuff+ Model
