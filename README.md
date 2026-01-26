@@ -19,11 +19,11 @@ B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 ## Personal Projects
 ### <ins>[Utilizing Causal Inference and a Mixed-Effect Model to Identify Playoff Effects on Starting Pitcher Performance](https://medium.com/@toddkawahara/utilizing-causal-inference-and-a-mixed-effect-model-to-identify-playoff-effects-on-starting-pitcher-544b0576c302)
 [Repo](https://github.com/toddkawahara/causal_inference_playoff)
-- Utilize Causal Inference techniques to estimate the effect the presence of a playoff game has on game performance
+- Utilized Causal Inference techniques to estimate the effect the presence of a playoff game has on game performance
 - Developed mixed effects model in Stan with a random effect on playoff game to identify invidual pitchers that perform better or worse
-- Control for pitcher ability, opponent lineup strength, and home games to fit model on pitcher's FIP in a game
+- Controled for pitcher ability, opponent lineup strength, and home games to fit model on pitcher's FIP in a game
 - Utilized non-centered parameterization for more efficient random effect sampling
-- Examine global and invididual playoff game posteriors to determine there is no effect of playoff games on performance 
+- Examined global and invididual playoff game posteriors to determine there is no effect of playoff games on performance 
 
 ![best_worst_playoff_pitchers](images/best_worst_playoff_pitchers.png)
 ### <ins>[A Stuff+ Metric Using An Ensemble of Gradient Boosted, Neural Network, and Bayesian Models](https://medium.com/@toddkawahara/a-stuff-metric-using-an-ensemble-of-gradient-boosted-neural-network-and-bayesian-models-6559a0cffcdd)
