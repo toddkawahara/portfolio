@@ -3,6 +3,9 @@ toddkawahara@hotmail.com | [LinkedIn](https://www.linkedin.com/in/todd-kawahara/
 
 
 ## Work Experience
+Data Operations Analyst, QA | Berkeley Research Group | Sep 2025 - Present
+
+
 Baseball Analytics Trainee (Data Science) | Cincinnati Reds | Feb 2024 - Nov 2024
 
 
@@ -14,6 +17,15 @@ M.S. Business Analytics | University of Massachusetts-Amherst '23
 
 B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 ## Personal Projects
+### <ins>[Utilizing Causal Inference and a Mixed-Effect Model to Identify Playoff Effects on Starting Pitcher Performance](https://medium.com/@toddkawahara/utilizing-causal-inference-and-a-mixed-effect-model-to-identify-playoff-effects-on-starting-pitcher-544b0576c302)
+[Repo](https://github.com/toddkawahara/causal_inference_playoff)
+- Utilize Causal Inference techniques to estimate the effect the presence of a playoff game has on game performance
+- Developed mixed effects model in Stan with a random effect on playoff game to identify invidual pitchers that perform better or worse
+- Control for pitcher ability, opponent lineup strength, and home games to fit model on pitcher's FIP in a game
+- Utilized non-centered parameterization for more efficient random effect sampling
+- Examine global and invididual playoff game posteriors to determine there is no effect of playoff games on performance 
+
+![model_struc](images/model_struc.webp)
 ### <ins>[A Stuff+ Metric Using An Ensemble of Gradient Boosted, Neural Network, and Bayesian Models](https://medium.com/@toddkawahara/a-stuff-metric-using-an-ensemble-of-gradient-boosted-neural-network-and-bayesian-models-6559a0cffcdd)
 [Notebook](https://github.com/toddkawahara/stuff-plus/blob/main/Stuff_plus.ipynb)
 - Created and tested XGBoost, LightGBM, CatBoost, and Dense Neural Networks for a baseline Stuff+ Model
