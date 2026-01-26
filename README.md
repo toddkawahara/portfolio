@@ -3,12 +3,23 @@ toddkawahara@hotmail.com | [LinkedIn](https://www.linkedin.com/in/todd-kawahara/
 
 
 ## Work Experience
-- Data Operations Analyst, QA | Berkeley Research Group | Sep 2025 - Present
-- Baseball Analytics Trainee (Data Science) | Cincinnati Reds | Feb 2024 - Nov 2024
-- Statistical Data Analyst | Olin Business School at Washington University in St. Louis | Jun 2023 - Jan 2024
+Data Operations Analyst, QA | Berkeley Research Group | Sep 2025 - Present
+
+
+
+Baseball Analytics Trainee (Data Science) | Cincinnati Reds | Feb 2024 - Nov 2024
+
+
+
+
+
+Statistical Data Analyst | Olin Business School at Washington University in St. Louis | Jun 2023 - Jan 2024
 ## Education
-- M.S. Business Analytics | University of Massachusetts-Amherst '23
-- B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
+M.S. Business Analytics | University of Massachusetts-Amherst '23
+
+
+
+B.S. Mathematics, B.S. Economics (Honors) | Trinity College '22
 ## Personal Projects
 ### <ins>[Utilizing Causal Inference and a Mixed-Effect Model to Identify Playoff Effects on Starting Pitcher Performance](https://medium.com/@toddkawahara/utilizing-causal-inference-and-a-mixed-effect-model-to-identify-playoff-effects-on-starting-pitcher-544b0576c302)
 [Repo](https://github.com/toddkawahara/causal_inference_playoff)
