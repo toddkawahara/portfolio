@@ -30,20 +30,24 @@
   .nav-links a:hover { color: var(--text); }
 
   /* HERO */
-  .hero { max-width: var(--max); margin: 0 auto; padding: 5rem 2.5rem 4rem; display: flex; align-items: center; gap: 3rem; }
+  .hero-bg {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.65);
+    pointer-events: none;
+  }
+  .hero { max-width: var(--max); margin: 0 auto; padding: 5rem 2.5rem 4rem; display: flex; align-items: center; gap: 3rem; position: relative; z-index: 1; }
   .hero-photo { flex-shrink: 0; width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 0.5px solid var(--border); }
   .hero-text h1 { font-size: 40px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 0.75rem; }
   .hero-text h1 span { color: var(--accent); }
   .hero-text p { font-size: 16px; color: var(--sub); line-height: 1.75; margin-bottom: 1.5rem; max-width: 520px; }
-  .btn-group { display: flex; gap: 10px; flex-wrap: wrap; }
-  .btn { padding: 9px 18px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; border: 0.5px solid var(--border); transition: all 0.15s; }
-  .btn-primary { background: var(--text); color: var(--white); border-color: var(--text); }
-  .btn-primary:hover { background: #333; }
-  .btn-secondary { background: transparent; color: var(--text); }
-  .btn-secondary:hover { background: var(--off); }
-
-  section { max-width: var(--max); margin: 0 auto; padding: 3rem 2.5rem; border-top: 0.5px solid var(--border); }
-  .section-label { font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
 
   /* CONTACT (top) */
   .contact-top { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
@@ -52,21 +56,26 @@
   .contact-top svg { width: 15px; height: 15px; }
   .contact-sep { color: var(--border); font-size: 18px; }
 
+  /* SECTIONS background */
+  .sections-bg { background: linear-gradient(135deg, #f0faf6 0%, #f7f7f5 40%, #ffffff 100%); }
+  section { max-width: var(--max); margin: 0 auto; padding: 3rem 2.5rem; border-top: 0.5px solid var(--border); }
+  .section-label { font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
+
   /* ABOUT */
   .about-bio { font-size: 15px; color: var(--sub); line-height: 1.8; margin-bottom: 1.75rem; }
   .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-  .skill { background: var(--off); color: var(--sub); font-size: 12px; font-weight: 500; padding: 5px 11px; border-radius: 6px; border: 0.5px solid var(--border); }
+  .skill { background: var(--white); color: var(--sub); font-size: 12px; font-weight: 500; padding: 5px 11px; border-radius: 6px; border: 0.5px solid var(--border); }
 
   /* PROJECTS */
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
-  a.project-card { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.25rem; transition: border-color 0.15s, background 0.15s; display: flex; flex-direction: column; gap: 6px; cursor: pointer; }
-  a.project-card:hover { border-color: rgba(0,0,0,0.18); background: var(--off); }
+  a.project-card { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.25rem; transition: border-color 0.15s, box-shadow 0.15s; display: flex; flex-direction: column; gap: 6px; cursor: pointer; }
+  a.project-card:hover { border-color: rgba(0,0,0,0.18); box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
   a.project-card h3 { font-size: 14px; font-weight: 500; letter-spacing: -0.01em; color: var(--text); }
   a.project-card p { font-size: 12px; color: var(--sub); line-height: 1.6; }
   .proj-arrow { font-size: 11px; color: var(--accent); margin-top: auto; display: inline-flex; align-items: center; gap: 4px; }
   .proj-arrow svg { width: 11px; height: 11px; }
 
-  .expand-btn { margin-top: 1.25rem; background: none; border: 0.5px solid var(--border); border-radius: 8px; padding: 9px 18px; font-size: 13px; font-weight: 500; color: var(--sub); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.15s; }
+  .expand-btn { margin-top: 1.25rem; background: var(--white); border: 0.5px solid var(--border); border-radius: 8px; padding: 9px 18px; font-size: 13px; font-weight: 500; color: var(--sub); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.15s; }
   .expand-btn:hover { background: var(--off); color: var(--text); }
   .expand-btn svg { width: 14px; height: 14px; transition: transform 0.2s; }
   .expand-btn.open svg { transform: rotate(180deg); }
@@ -88,7 +97,7 @@
   .edu-left p { font-size: 13px; color: var(--sub); }
   .edu-year { font-size: 12px; color: var(--muted); white-space: nowrap; padding-top: 2px; }
 
-  footer { text-align: center; padding: 2rem; font-size: 12px; color: var(--muted); border-top: 0.5px solid var(--border); }
+  footer { text-align: center; padding: 2rem; font-size: 12px; color: var(--muted); border-top: 0.5px solid var(--border); background: var(--white); }
 
   @media (max-width: 600px) {
     .hero { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
@@ -108,138 +117,144 @@
   </div>
 </nav>
 
-<div class="hero">
-  <img class="hero-photo" src="images/profile.jpg" alt="Todd Kawahara" />
-  <div class="hero-text">
-    <h1>Data Scientist &<br><span>Baseball Analytics</span></h1>
-    <p>Bayesian modeler, sabermetrician, and analytics engineer. I build probabilistic models that turn play-by-play data into decisions.</p>
-    <div class="contact-top">
-      <a href="mailto:example@email.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-        example@email.com
-      </a>
-      <span class="contact-sep">·</span>
-      <a href="https://www.linkedin.com/in/todd-kawahara/" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
-        LinkedIn
-      </a>
-      <span class="contact-sep">·</span>
-      <a href="https://github.com/toddkawahara" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-        GitHub
-      </a>
-      <span class="contact-sep">·</span>
-      <a href="https://medium.com/@toddkawahara" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
-        Blog
-      </a>
+<div class="hero-bg">
+  <div class="hero">
+    <img class="hero-photo" src="images/profile.jpg" alt="Todd Kawahara" />
+    <div class="hero-text">
+      <h1>Data Scientist &<br><span>Baseball Analytics</span></h1>
+      <p>Bayesian modeler, sabermetrician, and analytics engineer. I build probabilistic models that turn play-by-play data into decisions.</p>
+      <div class="contact-top">
+        <a href="mailto:toddkawahara@hotmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          toddkawahara@hotmail.com
+        </a>
+        <span class="contact-sep">·</span>
+        <a href="https://www.linkedin.com/in/todd-kawahara/" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+          LinkedIn
+        </a>
+        <span class="contact-sep">·</span>
+        <a href="https://github.com/toddkawahara" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+          GitHub
+        </a>
+        <span class="contact-sep">·</span>
+        <a href="https://medium.com/@toddkawahara" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+          Blog
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<section id="about">
-  <p class="section-label">About</p>
-  <p class="about-bio">
-    Data analytics professional specializing in predictive modeling, data analysis, and quality assurance. Experienced in developing data quality audit scripts as well as applying machine learning, Bayesian modeling, and statistical tests to deliver insights that drive real business and operational decisions. Equally comfortable presenting technical findings to non-technical stakeholders as building the models behind them.
-  </p>
-  <div class="skills-grid">
-    <span class="skill">Python</span>
-    <span class="skill">PyMC</span>
-    <span class="skill">Bayesian Modeling</span>
-    <span class="skill">Polars</span>
-    <span class="skill">Pandas</span>
-    <span class="skill">SQL</span>
-    <span class="skill">R</span>
-    <span class="skill">dplyr</span>
-    <span class="skill">Azure</span>
-    <span class="skill">Databricks</span>
-    <span class="skill">ArviZ</span>
-    <span class="skill">GitHub Actions</span>
-  </div>
-</section>
+<div class="sections-bg">
 
-<section id="projects">
-  <p class="section-label">Projects</p>
-  <div class="projects-grid">
-    <a href="#" target="_blank" class="project-card">
-      <h3>Pitcher strikeout prediction</h3>
-      <p>Hierarchical negative binomial model forecasting per-game strikeout counts with non-centered pitcher random intercepts, PSIS-LOO evaluation, and scheduled deployment via GitHub Actions.</p>
-      <span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span>
-    </a>
-    <a href="https://medium.com/@toddkawahara/bunting-in-extra-innings-frequentist-and-bayesian-a-b-testing-2f89a437e4a4" target="_blank" class="project-card">
-      <h3>Bunt strategy in extra innings</h3>
-      <p>Causal analysis of bunt effectiveness under the zombie runner rule using Bayesian power analysis (Beta-Binomial) and difference-in-differences methodology on play-by-play data.</p>
-      <span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span>
-    </a>
-    <a href="#" target="_blank" class="project-card">
-      <h3>Bayesian A/B testing framework</h3>
-      <p>Beta-Binomial conjugate and full PyMC implementations for comparing player performance metrics with credible interval estimation and posterior predictive checks.</p>
-      <span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span>
-    </a>
-  </div>
+  <section id="about">
+    <p class="section-label">About</p>
+    <p class="about-bio">
+      Data analytics professional specializing in predictive modeling, data analysis, and quality assurance. Experienced in developing data quality audit scripts as well as applying machine learning, Bayesian modeling, and statistical tests to deliver insights that drive real business and operational decisions. Equally comfortable presenting technical findings to non-technical stakeholders as building the models behind them.
+    </p>
+    <div class="skills-grid">
+      <span class="skill">Python</span>
+      <span class="skill">PyMC</span>
+      <span class="skill">Bayesian Modeling</span>
+      <span class="skill">Polars</span>
+      <span class="skill">Pandas</span>
+      <span class="skill">SQL</span>
+      <span class="skill">R</span>
+      <span class="skill">dplyr</span>
+      <span class="skill">Azure</span>
+      <span class="skill">Databricks</span>
+      <span class="skill">ArviZ</span>
+      <span class="skill">GitHub Actions</span>
+    </div>
+  </section>
 
-  <button class="expand-btn" id="expandBtn" onclick="toggleProjects()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-    Show more projects
-  </button>
+  <section id="projects">
+    <p class="section-label">Projects</p>
+    <div class="projects-grid">
+      <a href="#" target="_blank" class="project-card">
+        <h3>Pitcher strikeout prediction</h3>
+        <p>Hierarchical negative binomial model forecasting per-game strikeout counts with non-centered pitcher random intercepts, PSIS-LOO evaluation, and scheduled deployment via GitHub Actions.</p>
+        <span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span>
+      </a>
+      <a href="https://medium.com/@toddkawahara/bunting-in-extra-innings-frequentist-and-bayesian-a-b-testing-2f89a437e4a4" target="_blank" class="project-card">
+        <h3>Bunt strategy in extra innings</h3>
+        <p>Causal analysis of bunt effectiveness under the zombie runner rule using Bayesian power analysis (Beta-Binomial) and difference-in-differences methodology on play-by-play data.</p>
+        <span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span>
+      </a>
+      <a href="#" target="_blank" class="project-card">
+        <h3>Bayesian A/B testing framework</h3>
+        <p>Beta-Binomial conjugate and full PyMC implementations for comparing player performance metrics with credible interval estimation and posterior predictive checks.</p>
+        <span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span>
+      </a>
+    </div>
 
-  <div class="hidden-projects" id="hiddenProjects">
-    <a href="#" target="_blank" class="project-card"><h3>Project 1</h3><p>Description 1</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
-    <a href="#" target="_blank" class="project-card"><h3>Project 2</h3><p>Description 2</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
-    <a href="#" target="_blank" class="project-card"><h3>Project 3</h3><p>Description 3</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
-    <a href="#" target="_blank" class="project-card"><h3>Project 4</h3><p>Description 4</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
-    <a href="#" target="_blank" class="project-card"><h3>Project 5</h3><p>Description 5</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
-    <a href="#" target="_blank" class="project-card"><h3>Project 6</h3><p>Description 6</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
-  </div>
-</section>
+    <button class="expand-btn" id="expandBtn" onclick="toggleProjects()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      Show more projects
+    </button>
 
-<section id="experience">
-  <p class="section-label">Experience</p>
-  <div class="timeline">
-    <div class="timeline-item">
-      <span class="timeline-date">Sep 2025 – Present</span>
-      <div class="timeline-content">
-        <h3>Analyst II, Quality Assurance</h3>
-        <div class="org">Berkeley Research Group</div>
-        <p>Ensuring data integrity and compliance across large-scale healthcare datasets containing PII, conducting rigorous quality assurance analysis and audit scripting in a highly regulated environment.</p>
+    <div class="hidden-projects" id="hiddenProjects">
+      <a href="#" target="_blank" class="project-card"><h3>Project 1</h3><p>Description 1</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
+      <a href="#" target="_blank" class="project-card"><h3>Project 2</h3><p>Description 2</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
+      <a href="#" target="_blank" class="project-card"><h3>Project 3</h3><p>Description 3</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
+      <a href="#" target="_blank" class="project-card"><h3>Project 4</h3><p>Description 4</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
+      <a href="#" target="_blank" class="project-card"><h3>Project 5</h3><p>Description 5</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
+      <a href="#" target="_blank" class="project-card"><h3>Project 6</h3><p>Description 6</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="section-label">Experience</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-date">Sep 2025 – Present</span>
+        <div class="timeline-content">
+          <h3>Analyst II, Quality Assurance</h3>
+          <div class="org">Berkeley Research Group</div>
+          <p>Ensuring data integrity and compliance across large-scale healthcare datasets containing PII, conducting rigorous quality assurance analysis and audit scripting in a highly regulated environment.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Feb 2024 – Nov 2024</span>
+        <div class="timeline-content">
+          <h3>Data Scientist / Baseball Analytics Trainee</h3>
+          <div class="org">Cincinnati Reds</div>
+          <p>Developed statistical models, applications, and data-driven insights to support a World Series-contending organization, applying advanced analytics to real in-season decisions.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Jun 2023 – Jan 2024</span>
+        <div class="timeline-content">
+          <h3>Statistical Data Analyst</h3>
+          <div class="org">Olin Business School, Washington University in St. Louis</div>
+          <p>Applied machine learning modeling and hypothesis testing in the Higher Ed domain, contributing to graduate-level studies on student and institutional performance.</p>
+        </div>
       </div>
     </div>
-    <div class="timeline-item">
-      <span class="timeline-date">Feb 2024 - Nov 2024</span>
-      <div class="timeline-content">
-        <h3>Data Scientist / Baseball Analytics Trainee</h3>
-        <div class="org">Cincinnati Reds</div>
-        <p>Developed statistical models, applications, and data-driven insights to support a World Series-contending organization, applying advanced analytics to real in-season decisions.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date">Jun 2023 - Jan 2024</span>
-      <div class="timeline-content">
-        <h3>Statistical Data Analyst</h3>
-        <div class="org">Olin Business School, Washington University in St. Louis</div>
-        <p>Applied machine learning modeling and hypothesis testing in the Higher Ed domain, contributing to graduate-level studies on student and institutional performance.</p>
-      </div>
-    </div>
-  </div>
 
-  <p class="section-label" style="margin-top: 2.5rem;">Education</p>
-  <div class="edu-grid">
-    <div class="edu-item">
-      <div class="edu-left">
-        <h3>University of Massachusetts Amherst</h3>
-        <p>M.S. Business Analytics</p>
+    <p class="section-label" style="margin-top: 2.5rem;">Education</p>
+    <div class="edu-grid">
+      <div class="edu-item">
+        <div class="edu-left">
+          <h3>University of Massachusetts Amherst</h3>
+          <p>M.S. Business Analytics</p>
+        </div>
+        <span class="edu-year">2023</span>
       </div>
-      <span class="edu-year">2023</span>
-    </div>
-    <div class="edu-item">
-      <div class="edu-left">
-        <h3>Trinity College</h3>
-        <p>B.S. Economics (Honors) · B.S. Mathematics</p>
+      <div class="edu-item">
+        <div class="edu-left">
+          <h3>Trinity College</h3>
+          <p>B.S. Economics (Honors) · B.S. Mathematics</p>
+        </div>
+        <span class="edu-year">2022</span>
       </div>
-      <span class="edu-year">2022</span>
     </div>
-  </div>
-</section>
+  </section>
+
+</div>
 
 <footer>© 2026 Todd Kawahara</footer>
 
