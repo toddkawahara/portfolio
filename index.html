@@ -40,14 +40,14 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.25);
     pointer-events: none;
   }
   .hero { max-width: var(--max); margin: 0 auto; padding: 3rem 2.5rem 3rem; display: flex; align-items: center; gap: 3rem; position: relative; z-index: 1; }
   .hero-photo { flex-shrink: 0; width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 0.5px solid var(--border); }
-  .hero-text h1 { font-size: 36px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 0.6rem; color: #0f0f0d; }
-  .hero-text h1 span { color: #168a63; }
-  .hero-text p { font-size: 15px; color: #3a3a36; line-height: 1.75; margin-bottom: 1.25rem; max-width: 520px; }
+  .hero-text h1 { font-size: 36px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 0.6rem; color: #080808; text-shadow: 0 1px 3px rgba(255,255,255,0.6); }
+  .hero-text h1 span { color: #0f7a56; }
+  .hero-text p { font-size: 15px; color: #2a2a26; line-height: 1.75; margin-bottom: 1.25rem; max-width: 520px; font-weight: 500; }
 
   /* CONTACT (top) */
   .contact-top { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
@@ -61,7 +61,7 @@
   .skill { background: rgba(255,255,255,0.85); color: var(--sub); font-size: 12px; font-weight: 500; padding: 5px 11px; border-radius: 6px; border: 0.5px solid rgba(0,0,0,0.1); }
 
   /* SECTIONS */
-  .sections-bg { background: var(--white); }
+  .sections-bg { background: linear-gradient(160deg, #f0faf6 0%, #f5f9f7 35%, #ffffff 100%); }
   section { max-width: var(--max); margin: 0 auto; padding: 3rem 2.5rem; border-top: 0.5px solid var(--border); }
   .section-label { font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
 
@@ -122,9 +122,9 @@
       <h1>Data Scientist &<br><span>Baseball Analytics</span></h1>
       <p>Bayesian modeler, sabermetrician, and analytics engineer. I build probabilistic models that turn play-by-play data into decisions.</p>
       <div class="contact-top">
-        <a href="mailto:toddkawahara@hotmail.com">
+        <a href="mailto:example@email.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-          toddkawahara@hotmail.com
+          example@email.com
         </a>
         <span class="contact-sep">·</span>
         <a href="https://www.linkedin.com/in/todd-kawahara/" target="_blank">
@@ -238,7 +238,7 @@
       <div class="edu-item">
         <div class="edu-left">
           <h3>Trinity College</h3>
-          <p>B.S. Economics (Honors) | B.S. Mathematics</p>
+          <p>B.S. Economics (Honors) · B.S. Mathematics</p>
         </div>
         <span class="edu-year">2022</span>
       </div>
