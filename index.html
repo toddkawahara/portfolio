@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todd Kawahara — Data Scientist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --white: #ffffff;
+    --off: #f7f7f5;
+    --muted: #888880;
+    --text: #1a1a18;
+    --sub: #555550;
+    --accent: #1D9E75;
+    --accent-light: #E1F5EE;
+    --border: rgba(0,0,0,0.08);
+    --radius: 10px;
+    --max: 860px;
+  }
+  body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); font-size: 15px; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+
+  nav { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 0.5px solid var(--border); padding: 0 2.5rem; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .nav-name { font-weight: 500; font-size: 15px; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { font-size: 14px; color: var(--sub); transition: color 0.15s; }
+  .nav-links a:hover { color: var(--text); }
+
+  /* HERO */
+  .hero-bg {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    position: relative;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.25);
+    pointer-events: none;
+  }
+  .hero { max-width: var(--max); margin: 0 auto; padding: 3rem 2.5rem; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 3rem; position: relative; z-index: 1; }
+  .hero-photo { flex-shrink: 0; width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 0.5px solid var(--border); }
+  .hero-text h1 { font-size: 36px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 0.6rem; color: #080808; text-shadow: 0 1px 3px rgba(255,255,255,0.6); }
+  .hero-text h1 span { color: #0f7a56; }
+  .hero-text p { font-size: 15px; color: #2a2a26; line-height: 1.75; margin-bottom: 1.25rem; max-width: 520px; font-weight: 500; }
+
+  /* CONTACT */
+  .contact-top { display: flex; align-items: center; gap: 1.25rem; flex-wrap: nowrap; margin-bottom: 1.25rem; white-space: nowrap; }
+  .contact-top a { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #3a3a36; transition: color 0.15s; }
+  .contact-top a:hover { color: var(--accent); }
+  .contact-top svg { width: 14px; height: 14px; }
+  .contact-sep { color: rgba(0,0,0,0.2); font-size: 16px; }
+
+  /* SKILLS */
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill { background: rgba(255,255,255,0.85); color: var(--sub); font-size: 12px; font-weight: 500; padding: 5px 11px; border-radius: 6px; border: 0.5px solid rgba(0,0,0,0.1); }
+
+  /* SECTIONS */
+  .sections-bg { background: linear-gradient(160deg, #f0faf6 0%, #f5f9f7 35%, #ffffff 100%); }
+  section { max-width: var(--max); margin: 0 auto; padding: 3rem 2.5rem; border-top: 0.5px solid var(--border); }
+  .section-label { font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
+
+  /* PROJECTS */
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  a.project-card { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.25rem; transition: border-color 0.15s, box-shadow 0.15s; display: flex; flex-direction: column; gap: 6px; cursor: pointer; }
+  a.project-card:hover { border-color: rgba(0,0,0,0.18); box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  a.project-card h3 { font-size: 14px; font-weight: 500; letter-spacing: -0.01em; color: var(--text); }
+  a.project-card p { font-size: 12px; color: var(--sub); line-height: 1.6; }
+  .proj-arrow { font-size: 11px; color: var(--accent); margin-top: auto; display: inline-flex; align-items: center; gap: 4px; }
+  .proj-arrow svg { width: 11px; height: 11px; }
+
+  .expand-btn { margin: 1.25rem auto 0; background: var(--white); border: 0.5px solid var(--border); border-radius: 8px; padding: 9px 18px; font-size: 13px; font-weight: 500; color: var(--sub); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.15s; }
+  .expand-btn:hover { background: var(--off); color: var(--text); }
+  .expand-btn svg { width: 14px; height: 14px; transition: transform 0.2s; }
+  .expand-btn.open svg { transform: rotate(180deg); }
+  .hidden-projects { display: none; margin-top: 12px; }
+  .hidden-projects.visible { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+
+  /* EXPERIENCE */
+  .timeline { display: flex; flex-direction: column; }
+  .timeline-item { display: grid; grid-template-columns: 150px 1fr; gap: 1.5rem; padding: 1.25rem 0; border-bottom: 0.5px solid var(--border); }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-date { font-size: 12px; color: var(--muted); padding-top: 2px; }
+  .timeline-content h3 { font-size: 15px; font-weight: 500; margin-bottom: 2px; }
+  .timeline-content .org { font-size: 13px; color: var(--accent); font-weight: 500; margin-bottom: 4px; }
+  .timeline-content p { font-size: 13px; color: var(--sub); line-height: 1.6; }
+
+  .edu-divider { border: none; border-top: 0.5px solid var(--border); margin: 2.5rem 0 0; }
+  .edu-grid { display: flex; flex-direction: column; gap: 14px; }
+  .edu-item { display: flex; justify-content: space-between; align-items: flex-start; }
+  .edu-left h3 { font-size: 15px; font-weight: 500; }
+  .edu-left p { font-size: 13px; color: var(--sub); }
+  .edu-year { font-size: 12px; color: var(--muted); white-space: nowrap; padding-top: 2px; }
+
+  footer { text-align: center; padding: 2rem; font-size: 12px; color: var(--muted); border-top: 0.5px solid var(--border); background: var(--white); }
+
+  @media (max-width: 600px) {
+    .hero { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    .hero-photo { width: 100px; height: 100px; }
+    .timeline-item { grid-template-columns: 1fr; gap: 0.25rem; }
+    .contact-top { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Todd Kawahara</span>
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+  </div>
+</nav>
+
+<div class="hero-bg">
+  <div class="hero">
+    <img class="hero-photo" src="images/profile.jpg" alt="Todd Kawahara" />
+    <div class="hero-text">
+      <h1>Todd Kawahara</h1>
+      <p>Data analytics professional with experience in Machine Learning, Bayesian Modeling, and Quality Assurance. Mostly writing about baseball in my free time.</p>
+      <div class="contact-top">
+        <a href="mailto:toddkawahara@hotmail.com">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          toddkawahara@hotmail.com
+        </a>
+        <span class="contact-sep">·</span>
+        <a href="https://www.linkedin.com/in/todd-kawahara/" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+          LinkedIn
+        </a>
+        <span class="contact-sep">·</span>
+        <a href="https://github.com/toddkawahara" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+          GitHub
+        </a>
+        <span class="contact-sep">·</span>
+        <a href="https://medium.com/@toddkawahara" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+          Blog
+        </a>
+      </div>
+      <div class="skills-grid">
+        <span class="skill">Python</span>
+        <span class="skill">R</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Git</span>
+        <span class="skill">Tableau</span>
+        <span class="skill">PyMC</span>
+        <span class="skill">scikit-learn</span>
+        <span class="skill">Polars</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">dplyr</span>
+        <span class="skill">ggplot2</span>
+        <span class="skill">Seaborn</span>
+        <span class="skill">Matplotlib</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sections-bg">
+
+  <section id="projects">
+    <p class="section-label">Projects</p>
+    <div class="projects-grid">
+      <a href="https://medium.com/@toddkawahara/bunting-in-extra-innings-frequentist-and-bayesian-a-b-testing-2f89a437e4a4" target="_blank" class="project-card">
+        <h3>Bunting in Extra Innings: Frequentist and Bayesian A/B Testing</h3>
+        <p>An A/B test using Frequentist and Bayesian approaches for tied extra inning game strategies. Compares the proportion of times the ghost runner scored when the home team bunted versus swang away. Garnered 10,000+ impressions on LinkedIn.</p>
+        <span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span>
+      </a>
+      <a href="https://medium.com/@toddkawahara/utilizing-causal-inference-and-a-mixed-effect-model-to-identify-playoff-effects-on-starting-pitcher-544b0576c302" target="_blank" class="project-card">
+        <h3>Utilizing Causal Inference and a Mixed-Effect Model to Identify Playoff Effects on Starting Pitcher Performance</h3>
+        <p>A causal inference study using mixed-effect modeling with a random slope on a playoff game indicator to determine if there is a global and/or individual effect on pitcher performance.</p>
+        <span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span>
+      </a>
+      <a href="https://medium.com/@toddkawahara/attempting-to-model-inning-outcomes-using-stuff-a-bayesian-approach-8f6784241dfd" target="_blank" class="project-card">
+        <h3>Attempting to Model Inning Outcomes Using Stuff: A Bayesian Approach</h3>
+        <p>Created a Stuff+ metric to examine if a pitcher's stuff on a given day has any signal for modeling performance in an inning.</p>
+        <span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span>
+      </a>
+    </div>
+
+    <button class="expand-btn" id="expandBtn" onclick="toggleProjects()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      Show more projects
+    </button>
+
+    <div class="hidden-projects" id="hiddenProjects">
+      <a href="https://medium.com/@toddkawahara/a-stuff-metric-using-an-ensemble-of-gradient-boosted-neural-network-and-bayesian-models-6559a0cffcdd" target="_blank" class="project-card">
+        <h3>A Stuff+ Metric Using An Ensemble of Gradient Boosted, Neural Network, and Bayesian Models</h3>
+        <p>Attempting to create a Stuff+ metric that incorporates uncertainty in unpredictable batted ball outcomes using Bayesian modeling.</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
+      <a href="https://medium.com/@toddkawahara/expected-bat-speed-from-biomechanical-data-ecf5620e110e" target="_blank" class="project-card">
+        <h3>Expected Bat Speed from Biomechanical Data</h3>
+        <p>A follow up to an article I wrote predicting hitter exit velocity, again utilizes Driveline's OpenBiomechanic Project's data to create Machine Learning Models that predict the bat speed of a hitter using biomechanical data.</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
+      <a href="https://medium.com/@toddkawahara/using-machine-learning-to-determine-what-pre-existing-factors-put-individuals-at-high-risk-to-faeda950795c" target="_blank" class="project-card">
+        <h3>Using Machine Learning to Determine What Pre-Existing Factors Put Individuals at High Risk to Covid-19</h3>
+        <p>Uses data obtained from the Mexican government to see what factors and pre-existing conditions led to an individual needing hospitlization when infected with Covid-19.</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
+      <a href="https://medium.com/@toddkawahara/predicting-hitter-exit-velocity-the-importance-of-bat-speed-6d59a25d368c" target="_blank" class="project-card">
+        <h3>Predicting Hitter Exit Velocity: The Importance of Bat Speed</h3>
+        <p>A project utilizing Driveline's OpenBiomechanics Project's data to create Machine Learning models that predict the exit velocity of a hitter using biomechanical data. Retweeted by members of the Driveline R&D department.</p><span class="proj-arrow">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></span></a>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="section-label">Experience</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-date">Sep 2025 – Present</span>
+        <div class="timeline-content">
+          <h3>Analyst II, Quality Assurance</h3>
+          <div class="org">Berkeley Research Group</div>
+          <p>Ensuring data integrity and compliance across large-scale healthcare datasets containing PII, conducting rigorous quality assurance analysis and audit scripting in a highly regulated environment.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Feb 2024 – Nov 2024</span>
+        <div class="timeline-content">
+          <h3>Data Scientist / Baseball Analytics Trainee</h3>
+          <div class="org">Cincinnati Reds</div>
+          <p>Developed statistical models, applications, and data-driven insights to support a World Series-contending organization, applying advanced analytics to real in-season decisions.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Jun 2023 – Jan 2024</span>
+        <div class="timeline-content">
+          <h3>Statistical Data Analyst</h3>
+          <div class="org">Olin Business School, Washington University in St. Louis</div>
+          <p>Applied machine learning modeling and hypothesis testing in the Higher Ed domain, contributing to graduate-level studies on student and institutional performance.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="edu-divider" />
+    <p class="section-label" style="margin-top: 1.5rem;">Education</p>
+    <div class="edu-grid">
+      <div class="edu-item">
+        <div class="edu-left">
+          <h3>University of Massachusetts Amherst</h3>
+          <p>M.S. Business Analytics</p>
+        </div>
+        <span class="edu-year">2023</span>
+      </div>
+      <div class="edu-item">
+        <div class="edu-left">
+          <h3>Trinity College</h3>
+          <p>B.S. Economics (Honors) · B.S. Mathematics · Cum Laude</p>
+        </div>
+        <span class="edu-year">2022</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>© 2026 Todd Kawahara</footer>
+
+<script>
+  function toggleProjects() {
+    var btn = document.getElementById('expandBtn');
+    var panel = document.getElementById('hiddenProjects');
+    var open = panel.classList.contains('visible');
+    panel.classList.toggle('visible', !open);
+    btn.classList.toggle('open', !open);
+    btn.innerHTML = (!open ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg> Show fewer projects' : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg> Show more projects');
+  }
+</script>
+</body>
+</html>
